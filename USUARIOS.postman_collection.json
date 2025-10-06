@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "2f3cdfe5-e37f-4b82-a8b7-cdcba1b49b86",
+		"name": "USUARIOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46123304"
+	},
+	"item": [
+		{
+			"name": "raiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n     \"email\": \"other@sistema.com\",\r\n     \"name\": \"Other\",\r\n     \"lastname\": \"Sistema\",\r\n     \"phone\": \"3143143141\",\r\n     \"image\": \"yyyy\",\r\n     \"role\": \"other\",\r\n     \"password\": \"12345\"\r\n     }    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"seller@sistema.com\",\r\n \"password\": \"12345\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usersAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJzZWxsZXJAc2lzdGVtYS5jb20iLCJyb2xlIjoic2VsbGVyIiwiaWF0IjoxNzU5NjkzNTI3LCJleHAiOjE3NTk2OTcxMjd9.MnWlWLxDou-RObYo_ZLhL617YdekwHqFdsHwLGoZo08",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"micorreo2@gmail.com\",\r\n \"password\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJzZWxsZXJAc2lzdGVtYS5jb20iLCJyb2xlIjoic2VsbGVyIiwiaWF0IjoxNzU5NjkzNTI3LCJleHAiOjE3NTk2OTcxMjd9.MnWlWLxDou-RObYo_ZLhL617YdekwHqFdsHwLGoZo08",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/users/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJzZWxsZXJAc2lzdGVtYS5jb20iLCJyb2xlIjoic2VsbGVyIiwiaWF0IjoxNzU5NjkzNTI3LCJleHAiOjE3NTk2OTcxMjd9.MnWlWLxDou-RObYo_ZLhL617YdekwHqFdsHwLGoZo08",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n     \"id\": \"2\",\r\n     \"email\": \"customer_modified@modificado.com\",\r\n     \"name\": \"Customer\",\r\n     \"lastname\": \"Modified\",\r\n     \"phone\": \"3163163161\",\r\n     \"image\": \"yyyy\",\r\n     \"password\": \"12345\"\r\n      }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJzZWxsZXJAc2lzdGVtYS5jb20iLCJyb2xlIjoic2VsbGVyIiwiaWF0IjoxNzU5NjkzNTI3LCJleHAiOjE3NTk2OTcxMjd9.MnWlWLxDou-RObYo_ZLhL617YdekwHqFdsHwLGoZo08",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/users/delete/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
